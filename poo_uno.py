@@ -1,20 +1,20 @@
 
-class Coche():#declaracion de la clase
+class Coche():#declaracion de la clase, se nombre con la primera letra en mayusculas
     #propiedades
     largochasis = 250
     anchoChasis = 120
     ruedas = 4
-    enmarcha  = False
+    enmarcha = False #para comprobar el estado del coche
 
     #metodos
-    #self hace referencia al propio objeto perteneciente a la clase (this)
+    #self hace referencia al propio objeto o insstancia  de la clase (this)
     #self hace referencia a la instancia perteneciente a la clase.
     #self es obligatorio colocarlo
     
 
     def arrancar (self):
-        self.enmarcha = True
-        
+        self.enmarcha = True #cambia el estado a verdadero
+               
     
     def estado(self):
         if(self.enmarcha):
@@ -29,12 +29,16 @@ miCoche = Coche()#Instanciamos la clases
 
 print("El largo es: ", miCoche.largochasis)
 print("El coche tiene ", miCoche.ruedas, " Ruedas")
-print(miCoche.estado())
 miCoche.arrancar()
-miCoche.ruedas = 5
-
-print(miCoche.ruedas)
+print(miCoche.estado())
 
 
+#sintaxis
+#nombreobjeto.propiedad
+#nombreobjeto.metodo
 
+
+
+
+#nstancia: ejemplar perteneciiente a la clase
  
