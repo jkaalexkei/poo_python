@@ -4,22 +4,22 @@ class Coche():#declaracion de la clase, se nombre con la primera letra en mayusc
 
     #declaracion de constructor
     def __init__(self):#constructor y siempre se declara de esta manera
-        self.largochasis = 250
-        self.anchoChasis = 120
+        self.__largochasis = 250
+        self.__anchoChasis = 120
         self.__ruedas = 4 #Para encapsular una variable y que no sea accesible desde fuera de la clase se le antepone dos guiones bajos antes del elemento a encapsular. Asi mismo se debe usar en el resto del codigo con los elementos encapsulados
-        self.enmarcha = False #para comprobar el estado del coche
+        self.__enmarcha = False #para comprobar el estado del coche
     #el parametro self siempre debe estar como argumento por defecto
     def arrancar (self,arrancamos):
-        self.enmarcha = arrancamos
+        self.__enmarcha = arrancamos
 
-        if (self.enmarcha):
+        if (self.__enmarcha):
             return "El carro esta en marcha"
         else:
             return "El carro esta detenido"
                
     
     def estado(self):
-        print("El largo del carro es: ", self.largochasis, " el ancho es de: ", self.anchoChasis, " y tiene ", self.__ruedas, " ruedas")
+        print("El largo del carro es: ", self.__largochasis, " el ancho es de: ", self.__anchoChasis, " y tiene ", self.__ruedas, " ruedas")
 
 
 
@@ -31,6 +31,7 @@ miCoche = Coche()#Instanciamos la clases
 # print("El coche tiene ", miCoche.ruedas, " Ruedas")
 print(miCoche.arrancar(True))
 miCoche.estado()
+miCoche.__ruedas = 9
 
 print("---------- a continuacion creamos el segundo objeto------------")
 
