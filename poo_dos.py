@@ -6,7 +6,7 @@ class Coche():#declaracion de la clase, se nombre con la primera letra en mayusc
     def __init__(self):#constructor y siempre se declara de esta manera
         self.largochasis = 250
         self.anchoChasis = 120
-        self.ruedas = 4
+        self.__ruedas = 4 #Para encapsular una variable y que no sea accesible desde fuera de la clase se le antepone dos guiones bajos antes del elemento a encapsular. Asi mismo se debe usar en el resto del codigo con los elementos encapsulados
         self.enmarcha = False #para comprobar el estado del coche
     #el parametro self siempre debe estar como argumento por defecto
     def arrancar (self,arrancamos):
@@ -19,7 +19,7 @@ class Coche():#declaracion de la clase, se nombre con la primera letra en mayusc
                
     
     def estado(self):
-        print("El largo del carro es: ", self.largochasis, " el ancho es de: ", self.anchoChasis, " y tiene ", self.ruedas, " ruedas")
+        print("El largo del carro es: ", self.largochasis, " el ancho es de: ", self.anchoChasis, " y tiene ", self.__ruedas, " ruedas")
 
 
 
